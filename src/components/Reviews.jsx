@@ -29,10 +29,10 @@ const Reviews = () => {
     
     const dataElements = 
         <div className='w-full p-8 text-center flex flex-col items-center text-gray-700'>
-            <img src={currentIndex.imageurl} alt="" className='w-3/6 object-cover h-60 object-top rounded-full'/>
+            <img src={currentIndex.imageurl} alt="" className='lg:w-3/6 w-[100%] object-cover h-60 object-top rounded-full'/>
             <h3 className='mt-4 text-2xl font-bold'>{currentIndex.username}</h3>
             <p>{currentIndex.role}</p>
-            <p className='mt-4 w-3/6 text-sm'>‟{currentIndex.comments}”</p>
+            <p className='mt-4 lg:-3/6 w-full text-sm'>‟{currentIndex.comments}”</p>
         </div>
 
     function handlePrevious() {
@@ -52,9 +52,9 @@ const Reviews = () => {
     }
 
   return (
-    <div className='w-3/6 mx-auto'>
+    <div className='lg:w-3/6 w-full mx-auto'>
         {dataElements}
-        <div className='w-1/6 mx-auto flex'>
+        <div className='lg:w-1/6 w-3/6 mx-auto flex'>
         <FaAngleLeft onClick={handlePrevious} className='bg-green-700 text-white rounded-full w-full text-2xl mr-2'/>
         <FaAngleRight onClick={handleNext} className='bg-green-700 text-white rounded-full w-full text-2xl'/>
         </div>

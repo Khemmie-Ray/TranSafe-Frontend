@@ -9,7 +9,7 @@ const FindTrain = () => {
     };
 
   return (
-    <div className='text-gray-700'>
+    <div className='text-gray-700' id='findTrain'>
         <h2 className='text-2xl font-bold'>Let's help you find a train</h2>
         <div className='mt-8'>
     <Box sx={{ minWidth: 120 }} >

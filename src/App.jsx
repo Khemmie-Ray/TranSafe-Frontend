@@ -17,8 +17,6 @@ import Timetable from "./Pages/Timetable";
 import BookTrain from "./Pages/User/BookTrain/BookTrain";
 import TransactionHistory from "./Pages/User/Transaction/TransactionHistory";
 
-
-
 const router = createBrowserRouter(createRoutesFromElements(
   <Route>
   <Route path="/" element={<MainLayout />}>

@@ -21,16 +21,16 @@ const SignUp = () => {
 
   return (
     <main>
-      <div className="bg-cover bg-center h-screen mb-12 p-8 flex items-center justify-center"
+      <div className="bg-cover bg-center lg:h-screen h-[auto] mb-12 p-8 flex items-center justify-center"
         style={{backgroundImage: `url(${BgImg})`}}>
-        <div className="bg-green-100 w-3/6 rounded-md p-6">
+        <div className="bg-green-100 lg:w-3/6 w-[100%] rounded-md p-6">
           <h3 className="font-bold text-2xl text-center mb-4 text-green-700">Sign Up</h3>
             <form action="" className="flex flex-col">
-            <Grid container spacing={0} alignItems="center" className="flex justify-between">
+            <Grid container spacing={0} alignItems="center" className="lg:flex justify-between">
               <Grid items>
           <FormControl sx={{ minWidth: 120 }} size="small">
               <InputLabel id="demo-simple-select-label">Title</InputLabel>
-                <Select
+                <Select className="mb-4"
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 label="Title">
@@ -40,7 +40,7 @@ const SignUp = () => {
                 </Select> 
                 </FormControl>
               </Grid>
-                <Grid items className="">
+                <Grid items className="mb-4">
                   <TextField 
                   label="First Name" 
                   size="small"

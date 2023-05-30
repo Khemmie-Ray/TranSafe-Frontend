@@ -52,13 +52,13 @@ const Schedule = () => {
     return (
         <div>
         <h2 className="text-white text-center text-3xl font-bold my-4">Today's Schedule</h2>
-        <div className="bg-white w-4/5 mx-auto flex p-3">
-           <div className="w-1/3 mt-auto p-4 mb-auto text-gray-700 text-center">
+        <div className="bg-white lg:w-4/5 mx-auto lg:flex p-3 w-[100%]">
+           <div className="lg:w-1/3 w-[100%] mt-auto p-4 mb-auto text-gray-700 text-center">
             <p className='font-semibold'>Make your bookings</p>
             <h3 className='text-3xl font-bold mb-6'>{currentTime}</h3>
            <CalendarCard /> 
             </div> 
-            <div className="w-2/3"> 
+            <div className="lg:w-2/3 w-[100%]"> 
             <Box sx={{ borderBottom: 1, borderColor: 'divider', color: "white"}}>
               <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                 <Tab label="Morning" {...a11yProps(0)} className="font-bold" />
@@ -70,7 +70,7 @@ const Schedule = () => {
             {timeSchedule.filter((data) => data.time.morning)
                 .map((info) => (
                     <div
-                    className="flex bg-green-100 w-full justify-between py-4 px-6 rounded-md text-gray-700 mb-4 hover:border-x-4 border-green-700"
+                    className="lg:flex bg-green-100 w-full justify-between py-4 px-6 rounded-md text-gray-700 mb-4 hover:border-x-4 border-green-700"
                     key={info.time.morning}
                     >
                     <div>
@@ -79,7 +79,7 @@ const Schedule = () => {
                         <MdLocationPin className="text-green-900 font-xl" /> Departure: {info.departure}
                         </p>
                     </div>
-                    <div>
+                    <div className='mt-6'>
                         <p className="flex items-center font-bold">
                         <MdLocationPin className="text-green-900 font-xl" /> Destination: {info.destination}
                         </p>
@@ -92,7 +92,7 @@ const Schedule = () => {
             {timeSchedule.filter((data) => data.time.afternoon)
                 .map((info) => (
                     <div
-                    className="flex bg-green-100 w-full justify-between py-4 px-6 rounded-md text-gray-700 mb-4 hover:border-x-4 border-green-700"
+                    className="lg:flex bg-green-100 w-full justify-between py-4 px-6 rounded-md text-gray-700 mb-4 hover:border-x-4 border-green-700"
                     key={info.time.afternoon}
                     >
                     <div>
@@ -101,7 +101,7 @@ const Schedule = () => {
                         <MdLocationPin className="text-green-900 font-xl" /> Departure: {info.departure}
                         </p>
                     </div>
-                    <div>
+                    <div className='mt-6'>
                         <p className="flex items-center font-bold">
                         <MdLocationPin className="text-green-900 font-xl" /> Destination: {info.destination}
                         </p>
@@ -114,7 +114,7 @@ const Schedule = () => {
             {timeSchedule.filter((data) => data.time.evening)
                 .map((info) => (
                     <div
-                    className="flex bg-green-100 w-full justify-between py-4 px-6 rounded-md text-gray-700 mb-4 hover:border-x-4 border-green-700"
+                    className="lg:flex bg-green-100 w-full justify-between py-4 px-6 rounded-md text-gray-700 mb-4 hover:border-x-4 border-green-700"
                     key={info.time.evening}
                     >
                     <div>
@@ -123,7 +123,7 @@ const Schedule = () => {
                         <MdLocationPin className="text-green-900 font-xl" /> Departure: {info.departure}
                         </p>
                     </div>
-                    <div>
+                    <div className='mt-6'>
                         <p className="flex items-center font-bold">
                         <MdLocationPin className="text-green-900 font-xl" /> Destination: {info.destination}
                         </p>

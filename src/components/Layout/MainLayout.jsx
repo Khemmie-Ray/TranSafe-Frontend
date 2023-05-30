@@ -4,7 +4,7 @@ import Footer from "../Footer"
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col h-screen font-poppins">
+    <div className="flex flex-col h-screen font-poppins lg:w-full">
         <Header />
         <Outlet />
         <div className="mt-auto">
